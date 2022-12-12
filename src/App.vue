@@ -1,17 +1,61 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <MenuItem>
+    <TabMenu  title="MAILS" >
+      
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
+        praesentium cumque magnam odio iure quidem, quod illum numquam possimus
+        obcaecati commodi minima assumenda consectetur culpa fuga nulla ullam.
+        In, libero.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
+        praesentium cumque magnam odio iure quidem, quod illum numquam possimus
+        obcaecati commodi minima assumenda consectetur culpa fuga nulla ullam.
+        In, libero.
+      </p>
+
+    </TabMenu>
+    <TabMenu  title="ALARMS">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
+        praesentium cumque magnam odio iure quidem, quod illum numquam possimus
+        obcaecati commodi minima assumenda consectetur culpa fuga nulla ullam.
+        In, libero.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
+        praesentium cumque magnam odio iure quidem, quod illum numquam possimus
+        obcaecati commodi minima assumenda consectetur culpa fuga nulla ullam.
+        In, libero.
+      </p>
+    </TabMenu>
+    <TabMenu title="MOVIES">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
+        praesentium cumque magnam odio iure quidem, quod illum numquam possimus
+        obcaecati commodi minima assumenda consectetur culpa fuga nulla ullam.
+        In, libero.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
+        praesentium cumque magnam odio iure quidem, quod illum numquam possimus
+        obcaecati commodi minima assumenda consectetur culpa fuga nulla ullam.
+        In, libero.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
+        praesentium cumque magnam odio iure quidem, quod illum numquam possimus
+        obcaecati commodi minima assumenda consectetur culpa fuga nulla ullam.
+        In, libero.
+      </p>
+    </TabMenu>
+  </MenuItem>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+import MenuItem from "./components/MenuItem.vue";
+import TabMenu from "./components/TabMenu.vue";
 </script>
 
 <style>
@@ -19,8 +63,9 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
+
