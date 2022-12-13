@@ -53,6 +53,7 @@ export default {
       cursor: pointer;
       color: rgb(43, 43, 233);
       font-weight: bold;
+      
       &:hover {
         color: rgb(43, 43, 233, 0.7);
       }
@@ -80,4 +81,5 @@ export default {
 ::-webkit-scrollbar-thumb:hover {
   background: transparent;
 }
+
 </style>

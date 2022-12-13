@@ -21,10 +21,28 @@ export default {
 <style lang="scss" scoped>
 .tab-content{
     overflow: auto;
+    animation: fadeInFromNone 1s ease-out;
    p{
     font-weight: bold;
-    animation: an 1s ease-out 1 both;
+    
    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    
+    50% {
+        display: block;
+        opacity: 0.5;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
 }
 
 </style>
