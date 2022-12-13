@@ -35,51 +35,38 @@ export default {
 <style lang="scss">
 .tabs {
   display: flex;
-  height: 200px;
+  height: 230px;
+
   margin: auto;
   width: 60%;
+  @media screen and (max-width:480px) {
+    width: 100%;
+  }
   &__header {
+    margin: 0;
     width: 40%;
     list-style: none;
-.selected {
-      
-          width: 50%;
-          padding-right: 5%;
-          border-right: 2px rgb(69, 31, 239) solid;
-        
-      }
-    li {
-      display: flex;
-      cursor: pointer;
-      color: rgb(43, 43, 233);
-      font-weight: bold;
-      
-      &:hover {
-        color: rgb(43, 43, 233, 0.7);
-      }
-      
+    border: 1px #ccc solid;
+    padding: 0;
+    .selected {
+      padding-right: 5%;
+      border-right: 2px #009688 solid;
+    }
+  }
+  li {
+    text-align: center;
+    cursor: pointer;
+    color: #009688;
+    font-weight: bold;
+    font-size: 20px;
+
+    &:hover {
+      background-color: #e0f8f5;
+    }
+    p {
+      margin: 0;
+      padding: 20px;
     }
   }
 }
-::-webkit-scrollbar {
-  width: 20px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px transparent;
-  border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: transparent;
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: transparent;
-}
-
 </style>
