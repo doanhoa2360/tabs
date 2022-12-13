@@ -1,8 +1,13 @@
 <template>
   <div class="tabs">
     <ul class="tabs__header">
-      <li v-for="title in tabTitles" :key="title" @click="selectTitle = title">
-     {{ title }}
+      <li
+        v-for="title in tabTitles"
+        :key="title"
+        :class="{ selected: title == selectTitle }"
+        @click="selectTitle = title"
+      >
+        <p>{{ title }}</p>
       </li>
     </ul>
 
@@ -13,13 +18,14 @@
 import { provide, ref } from "vue";
 export default {
   setup(props, { slots }) {
-    const itemIcon =ref(slots.default().map((table) => table.props.class));
- 
-    const tabTitles = ref(slots.default().map((tab) => tab.props.title));   console.log(itemIcon)
+    const itemIcon = ref(slots.default().map((table) => table.props.class));
+
+    const tabTitles = ref(slots.default().map((tab) => tab.props.title));
+    console.log(itemIcon);
     const selectTitle = ref(tabTitles.value[0]);
     provide("selectTitle", selectTitle);
     return {
-        itemIcon,
+      itemIcon,
       selectTitle,
       tabTitles,
     };
@@ -35,16 +41,22 @@ export default {
   &__header {
     width: 40%;
     list-style: none;
-
+.selected {
+      
+          width: 50%;
+          padding-right: 5%;
+          border-right: 2px rgb(69, 31, 239) solid;
+        
+      }
     li {
-      padding-bottom: 40px;
-  
-  cursor: pointer;
+      display: flex;
+      cursor: pointer;
       color: rgb(43, 43, 233);
       font-weight: bold;
       &:hover {
         color: rgb(43, 43, 233, 0.7);
       }
+      
     }
   }
 }
@@ -68,5 +80,4 @@ export default {
 ::-webkit-scrollbar-thumb:hover {
   background: transparent;
 }
-
 </style>
